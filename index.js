@@ -69,7 +69,7 @@ app.post('/users/login', async(req,res)=>{
 })
 
 function authenticateToken(req,res,next){
-    const authHeader = req.headers['authorization']
+    const authHeader = req.headers.authorization
     const token = authHeader && authHeader.split(' ')[1]
     if (token == null) return res.sendStatus(401)
 
