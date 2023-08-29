@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auth</title>
+    <link href="styles.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <main>
+    <div class="wrapper login">
+        <form class="form contact-form login-form" action="/login" method="POST">
+          <h5>login</h5>
+          <div class="form-row">
+            <label for="username" class="form-label">Email</label>
+            <input type="email" name="email" class="form-input login-username-input" required/>
+          </div>
+          <div class="form-row">
+            <label for="password" class="form-label">password</label>
+            <input type="password" name="password" class="form-input login-password-input" required/>
+          </div>
+          <div class="text-small form-alert">there was an error</div>
+          <button type="submit" class="btn btn-block">submit</button>
+        </form>
+        <div>Don't have an account?</div><button class="btn-login"><a href="/register" >Signup</a></button>
+      </div>
+
+    </main>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="browser-app.js" type="text/javascript"></script>
+    </body>
+    </html>
