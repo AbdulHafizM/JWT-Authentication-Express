@@ -43,8 +43,10 @@ const login = async(req,res) => {
     const token = jwt.sign(tokenUser, process.env.ACCESS_TOKEN_SECRET, {
         expiresIn: '30d',
     })
-    
-    res.status(200).redirect('/dashboard')
+    sendToken = (token) =>{
+        return res.status(200).json({token})
+    } 
+    await sendToken(token)
 }
 
 
